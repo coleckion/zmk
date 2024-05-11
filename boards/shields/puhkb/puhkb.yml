@@ -1,15 +1,15 @@
 file_format: "1"
-id: pippikb
-name: pippikb
+id: puhkb
+name: puhkb
 type: shield
-url: https://github.com/
-requires: [pro_micro]
+url: https://github.com/coleckion/zmk/
+requires: [pro_micro_nrf52840]
 exposes: 
 features:
-  - keys
-  - rgb
-  - encoder
-  - oled
+  - 54 keys
+  - 54 rgbs
+  - 2 encoders
+  - 2 oleds
 siblings:
-  - pippikb_left
-  - pippikb_right
+  - puhkb_left
+  - puhkb_right
