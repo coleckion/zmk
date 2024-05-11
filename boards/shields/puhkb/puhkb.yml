@@ -1,0 +1,15 @@
+file_format: "1"
+id: pippikb
+name: pippikb
+type: shield
+url: https://github.com/
+requires: [pro_micro]
+exposes: 
+features:
+  - keys
+  - rgb
+  - encoder
+  - oled
+siblings:
+  - pippikb_left
+  - pippikb_right
