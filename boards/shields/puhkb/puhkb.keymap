@@ -158,16 +158,16 @@
 // * |------+---+------+------+------+------+------|               |------+---+------+------+------+------+------|
 // * |  ^   |   |   &  |   *  |   +  |   -  |   _  |               |  ^   |   |   &  |   *  |   +  |   -  |   _  |
 // * |------+------+------+------+------+------+------+------|     |------|------+------+------+------+------+------+------|
-// * |  {   |  <   |  /   |  |   |  :   |   ;  |  ?   |      |     |  {   |  <   |  /   |  |   |  :   |   ;  |  ?   |      |
+// * |  {   |  <   |  /   |  |   |  `   |   :  |  ?   |      |     |  {   |  <   |  /   |  |   |  `   |   :  |  ?   |      |
 // * |------+------+------+------+------+------+------+------|     |------+------+------+------+------+------+------+------|
-// * |  }   |  >   |  \   |TO(5) |      |  `~  |  ~   |      |     |  }   |  >   |  \   |      |TO(5) |      |      |      |
+// * |  }   |  >   |  \   |TO(5) |      | PgUP | PgDO |      |     |  }   |  >   |  \   |      |TO(5) | PgUP | PgDO |      |
 // * |-------------------------------------------------------|     |-------------------------------------------------------|
 // */
             bindings = <
 &kp TILDE           &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT              &kp TILDE           &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT
 &kp CARET           &kp AMPS  &kp STAR  &kp PLUS  &kp MINUS &kp UNDER              &kp CARET           &kp AMPS  &kp STAR  &kp PLUS  &kp MINUS &kp UNDER
-&kp LBRC  &kp LT    &kp FSLH  &kp PIPE  &kp COLON &kp SEMI  &kp QMARK &none        &kp LBRC  &kp LT    &kp FSLH  &kp PIPE  &kp COLON &kp SEMI  &kp QMARK &none
-&kp RBRC  &kp GT    &kp BSLH  &tog SYM  &none     &kp GRAVE &kp TILDE &none        &kp RBRC  &kp GT    &kp BSLH  &none     &tog SYM  &none     &none     &none
+&kp LBRC  &kp LT    &kp FSLH  &kp PIPE  &kp GRAVE &kp COLON &kp QMARK &none        &kp LBRC  &kp LT    &kp FSLH  &kp PIPE  &kp GRAVE &kp COLON &kp QMARK &none
+&kp RBRC  &kp GT    &kp BSLH  &tog SYM  &none     &kp PG_UP &kp PG_DN &none        &kp RBRC  &kp GT    &kp BSLH  &none     &tog SYM  &kp PG_UP &kp PG_DN &none
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp RC(PLUS) RC(MINUS)>;
@@ -198,19 +198,19 @@
         display-name = "GAME1";
 // * GAME1
 // * |-------------------------------------------|                 |-------------------------------------------|
-// * |      | |      |  UP  |      |      |      |                 |      | | NUM7 | NUM8 | NUM9 |   +  |   -  |
+// * | ENT  | |      |  UP  |      |      |      |                 |  F12 | | NUM7 | NUM8 | NUM9 |   +  |   -  |
 // * |------+---+------+------+------+------+------|               |------+---+------+------+------+------+------|
-// * |      |   |  LE  |  DO  |  RI  |      |      |               |      |   | NUM4 | NUM5 | NUM6 |   *  |  :   |
+// * | BSP  |   |  LE  |  DO  |  RI  |      |      |               |  F11 |   | NUM4 | NUM5 | NUM6 |   *  |  :   |
 // * |------+------+------+------+------+------+------+------|     |------|------+------+------+------+------+------+------|
-// * |      |      |      |      |      |      |      | TO(0)|     |  F9  | F10  | NUM1 | NUM2 | NUM3 | NUM0 |RShift| MUTE |
+// * |LShift|LCTRL |   Z  |   X  |   C  |   V  |   B  | TO(0)|     |  F9  | F10  | NUM1 | NUM2 | NUM3 | NUM0 |RShift| MUTE |
 // * |------+------+------+------+------+------+------+------|     |------+------+------+------+------+------+------+------|
 // * |LCTRL | LGUI | LAlt | SYM  | NUM  |Space |Space |      |     |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |
 // * |-------------------------------------------------------|     |-------------------------------------------------------|
 // */
             bindings = <
-&kp ESC             &kp Q     &kp UP    &kp E     &kp R     &kp T                  &kp BSPC             &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_PLUS     &kp KP_MINUS
-&kp TAB             &kp LEFT  &kp DOWN  &kp RIGHT &kp F     &kp G                  &kp RET              &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_MULTIPLY &kp KP_DIVIDE
-&kp LSHFT &kp RSHFT &kp Z     &kp X     &kp C     &kp V     &kp B     &to BASE     &kp F9    &kp F10    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N0       &kp RSHFT     &kp C_MUTE
+&kp RET             &kp Q     &kp UP    &kp E     &kp R     &kp T                  &kp F12              &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_PLUS     &kp KP_MINUS
+&kp BSPC            &kp LEFT  &kp DOWN  &kp RIGHT &kp F     &kp G                  &kp F11              &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_MULTIPLY &kp KP_DIVIDE
+&kp LSHFT &kp LCTRL &kp Z     &kp X     &kp C     &kp V     &kp B     &to BASE     &kp F9    &kp F10    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N0       &kp RSHFT     &kp C_MUTE
 &kp LCTRL &kp LGUI  &kp LALT  &mo SYM   &mo NUM   &kp SPACE &kp SPACE &trans       &kp F1    &kp F2     &kp F3    &kp F4    &kp F5    &kp F6          &kp F7        &kp F8
             >;
 
