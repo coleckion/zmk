@@ -1,9 +1,6 @@
 #include <physical_layouts.dtsi>
 
 / {
-	chosen {
-        	zmk,physical-layout = puhkb_physical_layout;
-    	};
 
 	puhkb_physical_layout: puhkb_physical_layout {
 		compatible = "zmk,physical-layout";
