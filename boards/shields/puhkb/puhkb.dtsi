@@ -8,7 +8,7 @@
 #include "puhkb-layout.dtsi"
 
 &puhkb_physical_layout {
-    transform = <&default_transform>;
+    transform = <&puhkb_physical_transform>;
 };
 
 / {
