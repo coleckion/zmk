@@ -1,9 +1,14 @@
 #include <physical_layouts.dtsi>
 
 / {
-    puhkb_physical_layout: puhkb_physical_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "default";
+	chosen {
+        	zmk,physical-layout = puhkb_physical_layout;
+    	};
+
+	puhkb_physical_layout: puhkb_physical_layout {
+		compatible = "zmk,physical-layout";
+		display-name = "default";
+		transform = <puhkb_physical_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0       0     0     0>
@@ -72,11 +77,8 @@
         ;
     };
 	
-	puhkb_position_map {
+	position_map {
 		compatible = "zmk,physical-layout-position-map";
-
-		complete;
-		
 		default {
 			physical-layout = <&puhkb_physical_layout>;
 			positions  
