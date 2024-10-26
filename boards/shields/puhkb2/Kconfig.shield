@@ -1,8 +1,0 @@
-# Copyright (c) 2020 Ryan Cross
-# SPDX-License-Identifier: MIT
-
-config SHIELD_PUHKB2_LEFT
-    def_bool $(shields_list_contains,puhkb2_left)
-
-config SHIELD_PUHKB2_RIGHT
-    def_bool $(shields_list_contains,puhkb2_right)
