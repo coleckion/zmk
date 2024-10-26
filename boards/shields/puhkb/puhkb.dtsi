@@ -5,12 +5,14 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "puhkb-layout.dtsi"
 
 / {
+
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+	zmk,physical-layouts = &puhkb_physical_layout;
     };
 
     default_transform: keymap_transform_0 {
@@ -31,6 +33,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6) RC(1,6)  RC(3,7) RC(3,8)
 	
 	kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
+	wakeup-source;
         diode-direction = "col2row";
     };
 
