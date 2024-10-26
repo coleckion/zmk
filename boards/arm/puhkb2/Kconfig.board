@@ -1,0 +1,8 @@
+# nrfmicro board configuration
+
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config BOARD_PUHKB2_1
+    bool "puhkb2_1"
+    depends on SOC_NRF52840_QIAA
