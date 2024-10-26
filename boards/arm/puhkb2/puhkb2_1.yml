@@ -1,0 +1,9 @@
+file_format: "1"
+id: puhkb2_1
+name: puhkb2 1.0
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://github.com/joric/nrfmicro/
