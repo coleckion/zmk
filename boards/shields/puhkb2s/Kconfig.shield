@@ -6,3 +6,6 @@ config SHIELD_PUHKB2_LEFT
 
 config SHIELD_PUHKB2_RIGHT
     def_bool $(shields_list_contains,puhkb2_right)
+
+config SHIELD_PUHKB2_NUMPAD
+    def_bool $(shields_list_contains,puhkb2_numpad)
