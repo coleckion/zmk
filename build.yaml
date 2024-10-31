@@ -23,3 +23,5 @@ include:
     snippet: studio-rpc-usb-uart
   - board: puhkb2_1
     shield: puhkb2_right
+  - board: puhkb2_1
+    shield: puhkb2_numpad
