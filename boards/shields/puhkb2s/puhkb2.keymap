@@ -19,6 +19,7 @@
 #define RF3 7
 #define RF4 8
 #define GAM 9
+#define GAM2 10
 
 / {
 
@@ -264,16 +265,37 @@
 // * |-----------------------------------------------------------|     |-----------------------------------------------------------|     |-------------------------------|
 // *     | TAB  |   A  |   S  |   D  |   F  |   G  |  [{  |  ]}  |         |  -_  |   H  |   J  |   K  |   L  |  P   |  '"  | \|   |         |  N4  |  N5  |  N6  |  -   |
 // * |-----------------------------------------------------------|     |-----------------------------------------------------------|     |-------------------------------|
-// * |LShift|LCTRL |   Z  |   X  |   C  |   V  |   B  | ENT  |         |  9(  |  0)  |   N  |   M  |  ,<  |  .>  |  /?  |RShift|         |  N4  |  N5  |  N6  |  *   |
+// * |LShift|LCTRL |   Z  |   X  |   C  |   V  |   B  | ENT  |         |  9(  |  0)  |   N  |   M  |  ,<  |  .>  |  /?  |RShift|         |  *   |  N1  |  N2  |  N3  |
 // * |-------------------------------------------------------|         |-------------------------------------------------------|         |---------------------------|
-// * |LCTRL | LGUI | LAlt | LF3  | LF2  | SPC  | SPC  | LF1  |         |  1!  |  2@  |  3#  |  4$  |  5%  |  6^  |  7&  |  8*  |         | LF1  |  N0  |  N6  |  /   |
+// * |LCTRL | LGUI | LAlt | LF3  | LF2  | SPC  | SPC  | GAM2 |         |  1!  |  2@  |  3#  |  4$  |  5%  |  6^  |  7&  |  8*  |         |  /   |  N0  |  .,  | RET/1|
 // * |-------------------------------------------------------|         |-------------------------------------------------------|         |---------------------------|
 // */
             bindings = <
-&kp ESC   &kp Q     &kp W    &kp E   &kp R   &kp T     &kp LPAR &kp RPAR     &kp EQUAL &kp Y     &kp U     &kp I   &kp O     &kp SEMI &kp BSPC &kp DEL        &kp KP_N7  &kp KP_N8 &kp KP_N9 &kp KP_PLUS
-&kp TAB   &kp A     &kp S    &kp D   &kp F   &kp G     &kp LBKT &kp RBKT     &kp MINUS &kp H     &kp J     &kp K   &kp L     &kp P    &kp SQT  &kp BSLH       &kp KP_N4  &kp KP_N5 &kp KP_N6 &kp KP_MINUS
-&kp LSHFT &kp RSHFT &kp Z    &kp X   &kp C   &kp V     &kp B    &kp RET      &kp N9    &kp N0    &kp N     &kp M   &kp COMMA &kp DOT  &kp FSLH &kp RSHFT      &kp KP_N1  &kp KP_N2 &kp KP_N3 &kp KP_MULTIPLY
-&kp LCTRL &kp LGUI  &kp LALT &mo LF3 &mo LF2 &kp SPACE &kp SPACE    &mo LF1      &kp N1    &kp N2    &kp N3    &kp N4  &kp N5    &kp N6   &kp N7   &kp N8     &mo LF1    &kp KP_N0 &kp DOT   &kp KP_DIVIDE
+&kp ESC   &kp Q     &kp W    &kp E   &kp R   &kp T     &kp LPAR  &kp RPAR     &kp EQUAL &kp Y     &kp U     &kp I   &kp O     &kp SEMI &kp BSPC &kp DEL        &kp KP_N7       &kp KP_N8 &kp KP_N9 &kp KP_PLUS
+&kp TAB   &kp A     &kp S    &kp D   &kp F   &kp G     &kp LBKT  &kp RBKT     &kp MINUS &kp H     &kp J     &kp K   &kp L     &kp P    &kp SQT  &kp BSLH       &kp KP_N4       &kp KP_N5 &kp KP_N6 &kp KP_MINUS
+&kp LSHFT &kp RSHFT &kp Z    &kp X   &kp C   &kp V     &kp B     &kp RET      &kp N9    &kp N0    &kp N     &kp M   &kp COMMA &kp DOT  &kp FSLH &kp RSHFT      &kp KP_MULTIPLY &kp KP_N1 &kp KP_N2 &kp KP_N3
+&kp LCTRL &kp LGUI  &kp LALT &mo LF3 &mo LF2 &kp SPACE &kp SPACE &mo gam2     &kp N1    &kp N2    &kp N3    &kp N4  &kp N5    &kp N6   &kp N7   &kp N8         &kp KP_DIVIDE   &kp KP_N0 &td2      &lt LF1 RET
+            >;
+        };
+
+        gam2_layer {
+        display-name = "GAM2";
+// * GAM
+// * |---------------------------------------------------------|       |---------------------------------------------------------|       |-----------------------------|
+// *   | ESC  |      |  UP  |      |  N7  |  N8  |  N9  |  +-  |         |      |      |      |      |      |      |      |      |         |  N7  |  N8  |  N9  |  +   |
+// * |-----------------------------------------------------------|     |-----------------------------------------------------------|     |-------------------------------|
+// *     | BSP  |  LE  |  DO  |  RI  |  N4  |  N5  |  N6  |  */  |         |      |      |      |      |      |      |      |      |         |  N4  |  N5  |  N6  |  -   |
+// * |-----------------------------------------------------------|     |-----------------------------------------------------------|     |-------------------------------|
+// * | BASE | NUML |      |  .   |  N0  |  N1  |  N2  |  N3  |         |  F9  |  F10 |  F11 |  F12 |      |      |      |      |         |  *   |  N1  |  N2  |  N3  |
+// * |-------------------------------------------------------|         |-------------------------------------------------------|         |---------------------------|
+// * |LCTRL | LGUI | LAlt | LF3  | LF2  | SPC  | SPC  | GAM2 |         |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |         |  /   |  N0  |  .,  | RET/1|
+// * |-------------------------------------------------------|         |-------------------------------------------------------|         |---------------------------|
+// */
+            bindings = <
+&kp ESC   &none      &kp UP   &none     &kp KP_N7 &kp KP_N8 &kp KP_N9 &td0         &none     &none     &none     &none   &none     &none    &none    &none          &kp KP_N7       &kp KP_N8 &kp KP_N9 &kp KP_PLUS
+&kp BSPC  &kp LEFT   &kp DOWN &kp RIGHT &kp KP_N4 &kp KP_N5 &kp KP_N6 &td1         &none     &none     &none     &none   &none     &none    &none    &none          &kp KP_N4       &kp KP_N5 &kp KP_N6 &kp KP_MINUS
+&to 0     &kp KP_NUM &none    &kp DOT   &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N3    &kp F9    &kp F10   &kp F11   &kp F12 &none     &none    &none    &none          &kp KP_MULTIPLY &kp KP_N1 &kp KP_N2 &kp KP_N3
+&kp LCTRL &kp LGUI   &kp LALT &mo LF3   &mo LF2   &kp SPACE &kp SPACE &mo gam2     &kp F1    &kp F2    &kp F3    &kp F4  &kp F5    &kp F6   &kp F7   &kp F8         &kp KP_DIVIDE   &kp KP_N0 &td2      &lt LF1 RET
             >;
         };
         
