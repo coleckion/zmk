@@ -8,6 +8,7 @@ exposes:
 features:
   - keys
 siblings:
+  - puhkb2_dongle
   - puhkb2_left
   - puhkb2_right
   - puhkb2_numpad
