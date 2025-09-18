@@ -1,6 +1,6 @@
 file_format: "1"
-id: puhkb2
-name: puhkb2
+id: puhkb4
+name: puhkb4
 type: shield
 url: https://github.com/coleckion/zmk/
 requires:
@@ -8,6 +8,6 @@ exposes:
 features:
   - keys
 siblings:
-  - puhkb2_left
-  - puhkb2_right
-  - puhkb2_numpad
+  - puhkb4_left
+  - puhkb4_right
+  - puhkb4_numpad
