@@ -5,11 +5,11 @@
  */
 
 /dts-v1/;
-#include "puhkb2_1.dtsi"
+#include "puhkb4.dtsi"
 
 / {
-    model = "puhkb2";
-    compatible = "coleckion,puhkb2";
+    model = "puhkb4";
+    compatible = "coleckion,puhkb4";
 
     chosen {
         zmk,battery = &vbatt;

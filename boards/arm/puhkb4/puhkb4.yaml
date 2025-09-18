@@ -1,5 +1,5 @@
-identifier: puhkb2_1
-name: puhkb2_1
+identifier: puhkb4
+name: puhkb4
 type: mcu
 arch: arm
 toolchain:

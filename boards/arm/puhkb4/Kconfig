@@ -2,4 +2,4 @@ config BOARD_ENABLE_DCDC
     bool "Enable DCDC mode"
     select SOC_DCDC_NRF52X
     default y
-    depends on (BOARD_PUHKB2_1)
+    depends on (BOARD_PUHKB4)

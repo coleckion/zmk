@@ -3,10 +3,10 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if BOARD_PUHKB2_1
+if BOARD_PUHKB4
 
 config BOARD
-    default "puhkb2"
+    default "puhkb4"
 
 if USB_DEVICE_STACK
 
@@ -18,4 +18,4 @@ endif # USB_DEVICE_STACK
 config BT_CTLR
     default BT
 
-endif # BOARD_PUHKB2_1
+endif # BOARD_PUHKB4
