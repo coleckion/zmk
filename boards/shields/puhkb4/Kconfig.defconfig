@@ -15,5 +15,9 @@ if SHIELD_PUHKB4_LEFT || SHIELD_PUHKB4_RIGHT || SHIELD_PUHKB4_NUMPAD
 
 config ZMK_SPLIT
     default y
+	
+config ZMK_RGB_UNDERGLOW
+    select WS2812_STRIP
+    select SPI
     
 endif
