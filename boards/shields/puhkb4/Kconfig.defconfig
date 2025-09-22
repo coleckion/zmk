@@ -2,23 +2,16 @@
 # SPDX-License-Identifier: MIT
 
 if SHIELD_PUHKB4_LEFT
-
-config ZMK_KEYBOARD_NAME
-    default "PUHKB4"
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
+	config ZMK_KEYBOARD_NAME
+		default "PUHKB4"
+	config ZMK_SPLIT_ROLE_CENTRAL
+		default y
 endif
 
 if SHIELD_PUHKB4_LEFT || SHIELD_PUHKB4_RIGHT || SHIELD_PUHKB4_NUMPAD
-
-config ZMK_SPLIT
-    default y
-	
-config ZMK_RGB_UNDERGLOW
-    select WS2812_STRIP
-    select SPI
-	
-    
+	config ZMK_SPLIT
+		default y	
+	config ZMK_RGB_UNDERGLOW
+		select WS2812_STRIP
+		select SPI    
 endif
