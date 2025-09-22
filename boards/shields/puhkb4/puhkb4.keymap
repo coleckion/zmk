@@ -151,7 +151,7 @@
 // * |-------------------------------------------|       |-------------------------------------------|       |-----------------------------|
 // *   | MUTE | PLAY | VUP  | VDO  |SUNLO | BTCL |         |xxxxxx| CapL | BriU |  PS  |  PUP | Home |         |  N7  |  N8  |  N9  |  +   |
 // * |---------------------------------------------|     |---------------------------------------------|     |-------------------------------|
-// *     | GAME |RGBTOG| BTS0 | BTS1 | BTS2 | BTS3 |         |xxxxxx| ScrL | BriD | Ins  |  PDO |  End |         |  N4  |  N5  |  N6  |  -   |
+// *     | BASE |RGBTOG| BTS0 | BTS1 | BTS2 | BTS3 |         |xxxxxx| ScrL | BriD | Ins  |  PDO |  End |         |  N4  |  N5  |  N6  |  -   |
 // * |---------------------------------------------|     |---------------------------------------------|     |-------------------------------|
 // * |RGBBRI|RGBBRD| BTD0 | BTD1 | BTD2 | BTD3 |         |xxxxxx|xxxxxx|xxxxxx|xxxxxx|xxxxxx|xxxxxx|         |  *   |  N1  |  N2  |  N3  |
 // * |-----------------------------------------|         |-----------------------------------------|         |---------------------------|
@@ -162,7 +162,7 @@
 // */
             bindings = <
 &kp C_MUTE      &kp C_PP        &kp C_VOL_UP    &kp C_VOL_DN  &studio_unlock &bt BT_CLR      &none     &kp CAPS &kp C_BRI_UP &kp PSCRN  &kp PG_UP    &kp HOME     &kp KP_N7       &kp KP_N8 &kp KP_N9 &kp KP_PLUS
-&tog GAME       &rgb_ug RGB_TOG &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &none     &kp SLCK &kp C_BRI_DN &kp INS    &kp PG_DN    &kp END      &kp KP_N4       &kp KP_N5 &kp KP_N6 &kp KP_MINUS
+&to BASE        &rgb_ug RGB_TOG &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &none     &kp SLCK &kp C_BRI_DN &kp INS    &kp PG_DN    &kp END      &kp KP_N4       &kp KP_N5 &kp KP_N6 &kp KP_MINUS
 &rgb_ug RGB_BRI &rgb_ug RGB_BRD &bt BT_DISC 0   &bt BT_DISC 1 &bt BT_DISC 2  &bt BT_DISC 3   &none     &none        &none    &none      &none        &none        &kp KP_MULTIPLY &kp KP_N1 &kp KP_N2 &kp KP_N3
 &rgb_ug RGB_SPI &rgb_ug RGB_SPD &rgb_ug RGB_EFF &mo LF2       &mo LF1        &kp SPACE       &none     &none        &none    &mo LF1    &mo LF2      &none        &kp KP_DIVIDE   &kp KP_N0 &td2      &lt 1 RET
                 &kp UP          &kp RET         &kp LEFT      &kp DOWN       &kp RIGHT                 &kp C_VOL_UP &kp C_PP &kp C_PREV &kp C_VOL_DN &kp C_NEXT
