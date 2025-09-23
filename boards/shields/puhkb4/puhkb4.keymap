@@ -107,16 +107,16 @@
 // * |---------------------------------------------|     |---------------------------------------------|     |-------------------------------|
 // * |LShift|  TD2 |   0  |   1  |   2  |   3  |         |  NUM |  N1  |  N2  |  N3  |  N0  | TD2  |         |StuUnl|  F1  |  F2  |  F3  |
 // * |-----------------------------------------|         |-----------------------------------------|         |---------------------------|
-// * |LCTRL | LGUI | LAlt | LF2  | LF1  | SPC  |         |Enter |Space |  RF1 | RF2  | RAlt |RShift|         |  NUM |  F10 |xxxxxx| RET/1|
+// * |LCTRL | LGUI | LAlt | LF2  | LF1  | SPC  |         |Enter |Space |  RF1 | RF2  | RAlt |RShift|         |  NUM |  F10 | RF2  | RET/1|
 // * |-----------------------------------------|         |-----------------------------------------|         |---------------------------|
 // * |xxxxxx| DOWN | RIGH | PUSH | LEFT | UP   |         |xxxxxx| DOWN | RIGH | PUSH | LEFT | UP   |         |xxxxxx|xxxxxx|xxxxxx|xxxxxx|
 // * |-----------------------------------------|         |-----------------------------------------|         |---------------------------|
 // */
             bindings = <
-&kp BSPC  &kp UP    &kp DEL   &kp N7   &kp N8   &kp N9      &kp KP_N7  &kp KP_N8    &kp KP_N9 &kp KP_PLUS  &kp KP_MULTIPLY &kp DEL      &kp F7         &kp F8  &kp F9 &kp F11
-&kp LEFT  &kp DOWN  &kp RIGHT &kp N4   &kp N5   &kp N6      &kp KP_N4  &kp KP_N5    &kp KP_N6 &kp KP_MINUS &kp KP_DIVIDE   &none        &kp F4         &kp F5  &kp F6 &kp F12
-&kp LSHFT &td2      &kp N0    &kp N1   &kp N2   &kp N3      &kp KP_NUM &kp KP_N1    &kp KP_N2 &kp KP_N3    &kp KP_N0       &td2         &studio_unlock &kp F1  &kp F2 &kp F3
-&kp LCTRL &kp LGUI  &kp LALT  &mo LF2  &mo LF1  &kp RET     &kp RET    &kp SPACE    &mo LF1   &mo LF2      &kp RALT        &kp RSHFT    &kp KP_NUM     &kp F10 &none  &lt 1 RET
+&kp BSPC  &kp UP    &kp DEL   &kp N7   &kp N8   &kp N9      &kp KP_N7  &kp KP_N8    &kp KP_N9 &kp KP_PLUS  &kp KP_MULTIPLY &kp DEL      &kp F7         &kp F8  &kp F9  &kp F11
+&kp LEFT  &kp DOWN  &kp RIGHT &kp N4   &kp N5   &kp N6      &kp KP_N4  &kp KP_N5    &kp KP_N6 &kp KP_MINUS &kp KP_DIVIDE   &none        &kp F4         &kp F5  &kp F6  &kp F12
+&kp LSHFT &td2      &kp N0    &kp N1   &kp N2   &kp N3      &kp KP_NUM &kp KP_N1    &kp KP_N2 &kp KP_N3    &kp KP_N0       &td2         &studio_unlock &kp F1  &kp F2  &kp F3
+&kp LCTRL &kp LGUI  &kp LALT  &mo LF2  &mo LF1  &kp RET     &kp RET    &kp SPACE    &mo LF1   &mo LF2      &kp RALT        &kp RSHFT    &kp KP_NUM     &kp F10 &mo LF2 &lt 1 RET
           &kp UP    &kp RET   &kp LEFT &kp DOWN &kp RIGHT              &kp C_VOL_UP &kp C_PP  &kp C_PREV   &kp C_VOL_DN    &kp C_NEXT
             >;
         };
@@ -137,10 +137,10 @@
 // * |-----------------------------------------|         |-----------------------------------------|         |---------------------------|
 // */
             bindings = <
-&kp EXCL  &kp AT   &kp HASH &kp DLLR &kp PRCNT &kp CARET   &kp MINUS &kp UNDER    &kp FSLH &kp QMARK  &kp BSLH     &kp PIPE     &kp KP_N7       &kp KP_N8 &kp KP_N9 &kp KP_PLUS
-&kp AMPS  &kp STAR &kp LPAR &kp RPAR &kp EQUAL &kp PLUS    &kp LBKT  &kp RBKT     &kp LBRC &kp RBRC   &kp GRAVE    &kp TILDE    &kp KP_N4       &kp KP_N5 &kp KP_N6 &kp KP_MINUS
-&kp F1    &kp F2   &kp F3   &kp F4   &kp F5    &kp F6      &kp F7    &kp F8       &kp F9   &kp F10    &kp F11      &kp F12      &kp KP_MULTIPLY &kp KP_N1 &kp KP_N2 &kp KP_N3
-&kp LCTRL &kp LGUI &kp LALT &mo LF2  &mo LF1   &kp SPACE   &kp RET   &kp SPACE    &mo LF1  &mo LF2    &kp RALT     &kp RSHFT    &kp KP_DIVIDE   &kp KP_N0 &td2      &lt 1 RET
+&kp EXCL  &kp AT   &kp HASH &kp DLLR &kp PRCNT &kp CARET   &kp MINUS &kp UNDER    &kp FSLH &kp QMARK  &kp BSLH     &kp PIPE          &bt BT_CLR      &bt BT_CLR_ALL &none         &none
+&kp AMPS  &kp STAR &kp LPAR &kp RPAR &kp EQUAL &kp PLUS    &kp LBKT  &kp RBKT     &kp LBRC &kp RBRC   &kp GRAVE    &kp TILDE         &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3 &none
+&kp F1    &kp F2   &kp F3   &kp F4   &kp F5    &kp F6      &kp F7    &kp F8       &kp F9   &kp F10    &kp F11      &kp F12           &none           &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3
+&kp LCTRL &kp LGUI &kp LALT &mo LF2  &mo LF1   &kp SPACE   &kp RET   &kp SPACE    &mo LF1  &mo LF2    &kp RALT     &kp RSHFT         &none           &kp KP_N0      &td2          &lt 1 RET
           &kp UP   &kp RET  &kp LEFT &kp DOWN  &kp RIGHT             &kp C_VOL_UP &kp C_PP &kp C_PREV &kp C_VOL_DN &kp C_NEXT
             >;
         };
@@ -161,10 +161,10 @@
 // * |-----------------------------------------|         |-----------------------------------------|         |---------------------------|
 // */
             bindings = <
-&kp C_MUTE      &kp C_PP        &kp C_VOL_UP    &kp C_VOL_DN  &studio_unlock &bt BT_CLR      &none     &kp CAPS &kp C_BRI_UP &kp PSCRN  &kp PG_UP    &kp HOME     &kp KP_N7       &kp KP_N8 &kp KP_N9 &kp KP_PLUS
-&to BASE        &rgb_ug RGB_TOG &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &none     &kp SLCK &kp C_BRI_DN &kp INS    &kp PG_DN    &kp END      &kp KP_N4       &kp KP_N5 &kp KP_N6 &kp KP_MINUS
-&rgb_ug RGB_BRI &rgb_ug RGB_BRD &bt BT_DISC 0   &bt BT_DISC 1 &bt BT_DISC 2  &bt BT_DISC 3   &none     &none        &none    &none      &none        &none        &kp KP_MULTIPLY &kp KP_N1 &kp KP_N2 &kp KP_N3
-&rgb_ug RGB_SPI &rgb_ug RGB_SPD &rgb_ug RGB_EFF &mo LF2       &mo LF1        &kp SPACE       &none     &none        &none    &mo LF1    &mo LF2      &none        &kp KP_DIVIDE   &kp KP_N0 &td2      &lt 1 RET
+&kp C_MUTE      &kp C_PP        &kp C_VOL_UP    &kp C_VOL_DN  &studio_unlock &bt BT_CLR      &none     &kp CAPS &kp C_BRI_UP &kp PSCRN  &kp PG_UP    &kp HOME          &bt BT_CLR      &bt BT_CLR_ALL &none         &none
+&to BASE        &rgb_ug RGB_TOG &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &none     &kp SLCK &kp C_BRI_DN &kp INS    &kp PG_DN    &kp END           &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3 &none
+&rgb_ug RGB_BRI &rgb_ug RGB_BRD &bt BT_DISC 0   &bt BT_DISC 1 &bt BT_DISC 2  &bt BT_DISC 3   &none     &none        &none    &none      &none        &none             &none           &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3
+&rgb_ug RGB_SPI &rgb_ug RGB_SPD &rgb_ug RGB_EFF &mo LF2       &mo LF1        &kp SPACE       &none     &none        &none    &mo LF1    &mo LF2      &none             &none           &kp KP_N0      &td2          &lt 1 RET
                 &kp UP          &kp RET         &kp LEFT      &kp DOWN       &kp RIGHT                 &kp C_VOL_UP &kp C_PP &kp C_PREV &kp C_VOL_DN &kp C_NEXT
             >;
         };
