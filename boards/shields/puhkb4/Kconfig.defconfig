@@ -8,10 +8,15 @@ if SHIELD_PUHKB4_LEFT
 		default y
 endif
 
-if SHIELD_PUHKB4_LEFT || SHIELD_PUHKB4_RIGHT || SHIELD_PUHKB4_NUMPAD
+if SHIELD_PUHKB4_LEFT || SHIELD_PUHKB4_RIGHT
 	config ZMK_SPLIT
 		default y	
 	config ZMK_RGB_UNDERGLOW
 		select WS2812_STRIP
 		select SPI    
+endif
+
+if SHIELD_PUHKB4_NUMPAD
+	config ZMK_KEYBOARD_NAME
+		default "PUHKB4NUM"
 endif
