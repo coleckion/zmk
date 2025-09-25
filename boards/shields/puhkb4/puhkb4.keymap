@@ -19,13 +19,8 @@
 #define LF1 1
 #define LF2 2
 #define LF3 3
-#define LF4 4
-#define RF1 5
-#define RF2 6
-#define RF3 7
-#define RF4 8
-#define GAM 9
-#define GAM2 10
+#define GAM 4
+#define GAM2 5
 
 / {
 
@@ -35,10 +30,6 @@
 			if-layers = <LF1 LF2>;
 			then-layer = <LF3>;
 		};
-		rf3_layer {
-			if-layers = <RF1 RF2>;
-			then-layer = <RF3>;
-        };
     };
     
 	behaviors {
@@ -109,7 +100,7 @@
 // * |-----------------------------------------|         |-----------------------------------------|
 // * |LCTRL | LGUI | LAlt | LF2  | LF1  | SPC  |         |Enter |Space |  RF1 | RF2  | RAlt |RShift|
 // * |-----------------------------------------|         |-----------------------------------------|
-// * |xxxxxx| DOWN | RIGH | PUSH | LEFT | UP   |         |xxxxxx| VOL- | NEXT | PLAY | BACK | VOL+ |
+// * |xxxxxx|  UP  |  RET | LEFT | DOWN | RIGH |         |xxxxxx| VOL+ | PLAY | BACK | VOL- | NEXT |
 // * |-----------------------------------------|         |-----------------------------------------|
 // */
             bindings = <
@@ -133,7 +124,7 @@
 // * |-----------------------------------------|         |-----------------------------------------|
 // * |LCTRL | LGUI | LAlt | LF2  | LF1  | SPC  |         |Enter |Space |  RF1 | RF2  | RAlt |RShift|
 // * |-----------------------------------------|         |-----------------------------------------|
-// * |xxxxxx| DOWN | RIGH | PUSH | LEFT | UP   |         |xxxxxx| DOWN | RIGH | PUSH | LEFT | UP   |
+// * |xxxxxx|  UP  |  RET | LEFT | DOWN | RIGH |         |xxxxxx| VOL+ | PLAY | BACK | VOL- | NEXT |
 // * |-----------------------------------------|         |-----------------------------------------|
 // */
             bindings = <
@@ -157,7 +148,7 @@
 // * |-----------------------------------------|         |-----------------------------------------|
 // * |LCTRL | CAPW | LAlt | LF2  | LF1  | SPC  |         |Enter |Space |  RF1 | RF2  | RAlt |RShift|
 // * |-----------------------------------------|         |-----------------------------------------|
-// * |xxxxxx| DOWN | RIGH | PUSH | LEFT | UP   |         |xxxxxx| DOWN | RIGH | PUSH | LEFT | UP   |
+// * |xxxxxx|  UP  |  RET | LEFT | DOWN | RIGH |         |xxxxxx| VOL+ | PLAY | BACK | VOL- | NEXT |
 // * |-----------------------------------------|         |-----------------------------------------|
 // */
             bindings = <
@@ -175,18 +166,18 @@
 // * |-------------------------------------------|       |-------------------------------------------|
 // *   | MUTE | PLAY | VUP  | VDO  |SUNLO | BTCL |         |xxxxxx| CapL | BriU |  PS  |  PUP | Home |
 // * |---------------------------------------------|     |---------------------------------------------|
-// *     | BASE |RGBTOG| BTS0 | BTS1 | BTS2 | BTS3 |         |xxxxxx| ScrL | BriD | Ins  |  PDO |  End |
+// *     | GAME |RGBTOG| BTS0 | BTS1 | BTS2 | BTS3 |         |xxxxxx| ScrL | BriD | Ins  |  PDO |  End |
 // * |---------------------------------------------|     |---------------------------------------------|
 // * |RGBBRI|RGBBRD| BTD0 | BTD1 | BTD2 | BTD3 |         |xxxxxx|xxxxxx|xxxxxx|xxxxxx|xxxxxx|xxxxxx|
 // * |-----------------------------------------|         |-----------------------------------------|
 // * |RGBSPI|RGBSPD|RGBEFF| LF2  | LF1  | SPC  |         |Space |Space |  RF1 | RF2  |xxxxxx|xxxxxx|
 // * |-----------------------------------------|         |-----------------------------------------|
-// * |xxxxxx| DOWN | RIGH | PUSH | LEFT | UP   |         |xxxxxx| DOWN | RIGH | PUSH | LEFT | UP   |
+// * |xxxxxx|  UP  |  RET | LEFT | DOWN | RIGH |         |xxxxxx| VOL+ | PLAY | BACK | VOL- | NEXT |
 // * |-----------------------------------------|         |-----------------------------------------|
 // */
             bindings = <
 &kp C_MUTE      &kp C_PP        &kp C_VOL_UP    &kp C_VOL_DN  &studio_unlock &bt BT_CLR      &none     &kp CAPS &kp C_BRI_UP &kp PSCRN  &kp PG_UP    &kp HOME
-&to BASE        &rgb_ug RGB_TOG &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &none     &kp SLCK &kp C_BRI_DN &kp INS    &kp PG_DN    &kp END
+&to GAM         &rgb_ug RGB_TOG &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &none     &kp SLCK &kp C_BRI_DN &kp INS    &kp PG_DN    &kp END
 &rgb_ug RGB_BRI &rgb_ug RGB_BRD &bt BT_DISC 0   &bt BT_DISC 1 &bt BT_DISC 2  &bt BT_DISC 3   &none     &none        &none    &none      &none        &none
 &rgb_ug RGB_SPI &rgb_ug RGB_SPD &rgb_ug RGB_EFF &mo LF2       &mo LF1        &kp SPACE       &none     &none        &none    &mo LF1    &mo LF2      &none
                 &kp UP          &kp RET         &kp LEFT      &kp DOWN       &kp RIGHT                 &kp C_VOL_UP &kp C_PP &kp C_PREV &kp C_VOL_DN &kp C_NEXT
@@ -205,7 +196,7 @@
 // * |-----------------------------------------|         |-----------------------------------------|
 // * |LCTRL | RET  | LAlt | BASE | GAM2 | SPC  |         |  1   |  2   |  3   |  4   |  5   |  6   |
 // * |-----------------------------------------|         |-----------------------------------------|
-// * |xxxxxx| DOWN | RIGH | PUSH | LEFT | UP   |         |xxxxxx| VOL- | NEXT | PLAY | BACK | VOL+ |
+// * |xxxxxx|  UP  |  RET | LEFT | DOWN | RIGH |         |xxxxxx| VOL+ | PLAY | BACK | VOL- | NEXT |
 // * |-----------------------------------------|         |-----------------------------------------|
 // */
             bindings = <
@@ -229,7 +220,7 @@
 // * |-----------------------------------------|         |-----------------------------------------|
 // * |LCTRL | RET  | LAlt | BASE | GAM2 | SPC  |         |  N1  |  N2  |  N3  |  N4  |  N5  |  N6  |
 // * |-----------------------------------------|         |-----------------------------------------|
-// * |xxxxxx| DOWN | RIGH | PUSH | LEFT | UP   |         |xxxxxx| VOL- | NEXT | PLAY | BACK | VOL+ |
+// * |xxxxxx|  UP  |  RET | LEFT | DOWN | RIGH |         |xxxxxx| VOL+ | PLAY | BACK | VOL- | NEXT |
 // * |-----------------------------------------|         |-----------------------------------------|
 // */
             bindings = <
