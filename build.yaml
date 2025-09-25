@@ -29,4 +29,4 @@ include:
   - board: puhkb4
     shield: settings_reset
   - board: puhkb2_1
-    shield: puhkb4_numpad
+    shield: settings_reset
