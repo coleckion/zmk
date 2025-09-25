@@ -15,3 +15,8 @@ if SHIELD_PUHKB4_LEFT || SHIELD_PUHKB4_RIGHT
 		select WS2812_STRIP
 		select SPI    
 endif
+
+if SHIELD_PUHKB4_NUMPAD
+	config ZMK_KEYBOARD_NAME
+		default "PUHKB4NUM"
+endif

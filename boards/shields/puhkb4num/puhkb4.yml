@@ -2,14 +2,12 @@ file_format: "1"
 id: puhkb4
 name: puhkb4
 type: shield
-url: https://github.com/coleckion/zmk/tree/puhkb4
+url: https://github.com/coleckion/zmk/
 requires:
 exposes: 
 features:
-  - 58 keys
-  - rgbs
-  - split
-  - wireless
+  - keys
 siblings:
   - puhkb4_left
   - puhkb4_right
+  - puhkb4_numpad
