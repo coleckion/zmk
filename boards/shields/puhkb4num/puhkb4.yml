@@ -8,6 +8,4 @@ exposes:
 features:
   - keys
 siblings:
-  - puhkb4_left
-  - puhkb4_right
   - puhkb4_numpad

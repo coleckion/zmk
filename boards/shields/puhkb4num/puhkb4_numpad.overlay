@@ -6,10 +6,6 @@
 
 #include "puhkb4.dtsi"
 
-&default_transform {
-    col-offset = <12>;
-};
-
     &kscan0 {
         row-gpios
             = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
