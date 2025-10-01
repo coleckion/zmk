@@ -5,10 +5,11 @@
  */
 
 #include "puhkb4dongle.dtsi"
-
-chosen {
+/ {
+	chosen {
         zephyr,display = &oled;
     };
+};
 
 &kscan0 {
         row-gpios
