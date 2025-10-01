@@ -4,3 +4,13 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "puhkb4dongle.dtsi"
+
+    &kscan0 {
+        row-gpios
+            = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+		col-gpios
+			= <&gpio0 24 GPIO_ACTIVE_HIGH>
+			;
+    };
