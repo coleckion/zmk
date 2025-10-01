@@ -6,14 +6,18 @@
 
 #include "puhkb4dongle.dtsi"
 
-    &kscan0 {
+chosen {
+        zephyr,display = &oled;
+    };
+
+&kscan0 {
         row-gpios
             = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 		col-gpios
 			= <&gpio0 24 GPIO_ACTIVE_HIGH>
 			;
-    };
+};
 	
 &pro_micro_i2c {
     status = "okay";
